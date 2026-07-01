@@ -79,9 +79,10 @@ Display the task list for the detected project type. Show a clear header, then t
   22. Continuous Discovery                       Designer + CS     required
 
 ─────────────────────────────────────────────────────
-To edit: type  remove 3 7     to skip tasks by number
-               edit 4 New title  to rename a task
-               done             when you're happy
+To edit: type  remove 3 7          to skip tasks by number
+               edit 4 New title     to rename a task
+               add New task title   to add a custom task at the end
+               done                 when you're happy
 ─────────────────────────────────────────────────────
 ```
 
@@ -161,9 +162,10 @@ After displaying the task list, wait for user input.
 - If they type `done` or say they're happy → proceed to Phase 4.
 - If they type `remove 3 7` → remove those tasks from the working list, show updated list, wait again.
 - If they type `edit 4 New title` → rename task 4's `jiraTemplate.summary` and `title` to the new text. Renumber and show updated list. Wait again.
+- If they type `add New task title` → append a custom task at the end of the working list. Assign it a temporary id `custom-1`, `custom-2`, etc. (incrementing). Set `title` and `jiraTemplate.summary` to the provided text. Mark it as `required`. Show updated list, wait again.
 - If they make multiple edits in one message (e.g. "remove 9 10 11 and edit 14 to Wireframes v2") → apply all changes, show updated list.
-- Keep the renumbering consistent: always re-number from 1 after any removal.
-- When showing an updated list, only show the diff summary ("Removed: Request Quantitative Data, User Research, User Research Analysis") and the updated full list.
+- Keep the renumbering consistent: always re-number from 1 after any removal or addition.
+- When showing an updated list, only show the diff summary ("Added: New task title" / "Removed: ...") and the updated full list.
 
 ---
 
@@ -227,6 +229,24 @@ Get your API token at: https://id.atlassian.com/manage-profile/security/api-toke
 Then stop — do not proceed to ticket creation.
 
 Build the full task objects from the working task list. Read `$CLAUDE_PLUGIN_ROOT/references/tasks.json` to get the full `what`, `outcome`, `acceptanceCriteria`, `subTasks`, and `jiraTemplate` for each task. Match by `id`. Apply any title edits the user made to `jiraTemplate.summary` and `title`.
+
+For custom tasks (id starts with `custom-`), do not look up tasks.json. Instead construct the task object inline, inheriting `phase` and `state` from the task immediately before it in the list (or defaulting to `"delivery"` / `"build"` if it's the first task). Use this shape:
+
+```json
+{
+  "id": "custom-1",
+  "title": "...",
+  "phase": "<inherited>",
+  "state": "<inherited>",
+  "owner": "Designer",
+  "what": "...",
+  "outcome": "",
+  "acceptanceCriteria": [],
+  "subTasks": [],
+  "optional": false,
+  "jiraTemplate": { "summary": "...", "labels": [] }
+}
+```
 
 Write the input JSON to `/tmp/design-process-input.json`:
 
