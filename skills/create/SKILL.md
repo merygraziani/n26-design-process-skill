@@ -176,13 +176,13 @@ Once the user is happy with the tasks, ask for project info. Display this messag
 ```
 Almost there! Tell me about the project:
 
-**Project name** (required): 
-**Problem statement** (optional): 
-**Markets** (optional — pick any: ALL, DEU, FRA, ES, ITA, ROE): 
-**Targeted users** (optional): 
-**Designer email(s)** (optional — comma-separated): 
-**PM email** (optional): 
-**Initiative link** (required — Jira issue key or URL, e.g. CIAM-123): 
+Project name *: 
+Problem statement: 
+Markets (pick any: ALL, DEU, FRA, ES, ITA, ROE): 
+Targeted users: 
+Designer email(s) (comma-separated): 
+PM email: 
+Initiative link * (Jira issue key or URL, e.g. CIAM-123): 
 ```
 
 Parse the user's reply. If the project name or initiative link is missing, ask for just that one missing field before continuing. Don't ask for everything again.
