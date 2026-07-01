@@ -6,21 +6,25 @@ No website, no manual ticket creation. Tell Claude you're starting a new project
 
 ## Setup
 
-### 1. Set up Jira credentials
+### 1. Set up Jira credentials (required — do this first)
 
-Add these lines to your shell profile (`~/.zshrc` or `~/.bash_profile`):
+The skill needs your Jira credentials to create tickets. Without them it won't work.
+
+Open your shell profile (`~/.zshrc` or `~/.bash_profile`) and add these two lines:
 
 ```bash
 export JIRA_EMAIL=your.email@n26.com
 export JIRA_API_TOKEN=your-api-token-here
 ```
 
-Get your API token at: https://id.atlassian.com/manage-profile/security/api-tokens
+Get your API token here (takes 30 seconds): https://id.atlassian.com/manage-profile/security/api-tokens
 
-Then reload your shell:
+Then reload your shell so the changes take effect:
 ```bash
 source ~/.zshrc
 ```
+
+You only need to do this once. The credentials stay on your machine and are never shared.
 
 ### 2. Install the plugin
 
