@@ -36,7 +36,7 @@ In Claude Code, run these three commands:
 
 Either type the skill directly:
 ```
-/design-process-creator:design-process
+/design-process-creator:create
 ```
 
 Or just describe what you need — Claude will recognise when to use this skill automatically based on context (e.g. "I'm starting a new project, can you create the design process tickets?").
