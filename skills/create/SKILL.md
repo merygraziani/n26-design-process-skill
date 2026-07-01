@@ -171,21 +171,34 @@ After displaying the task list, wait for user input.
 
 ## Phase 4 — Collect Project Info
 
-Once the user is happy with the tasks, ask for project info. Display this message:
+Collect project info in three sequential steps. Wait for a reply after each before moving on.
 
+**Step 1 — Project details:**
 ```
-Almost there! Tell me about the project:
+What's the project about?
 
-Project name *: 
+Project name (required): 
 Problem statement: 
-Markets (pick any: ALL, DEU, FRA, ES, ITA, ROE): 
+Markets (ALL, DEU, FRA, ES, ITA, ROE): 
 Targeted users: 
-Designer email(s) (comma-separated): 
-PM email: 
-Initiative link * (Jira issue key or URL, e.g. CIAM-123): 
 ```
 
-Parse the user's reply. If the project name or initiative link is missing, ask for just that one missing field before continuing. Don't ask for everything again.
+**Step 2 — Ownership:**
+```
+Who's responsible for the project?
+
+Designer email (required): 
+PM email: 
+```
+
+**Step 3 — Jira link:**
+```
+Jira initiative link (required): 
+
+This is needed to create the tickets — all tasks will be created under this initiative. If you don't have it, ask your PM.
+```
+
+If any required field is missing after its step, ask for just that field before continuing. Don't repeat the full form.
 
 ---
 
