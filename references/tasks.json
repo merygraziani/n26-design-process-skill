@@ -1,0 +1,482 @@
+[
+  {
+    "id": "discovery",
+    "title": "Discovery",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Understand the problem space by gathering context, aligning with stakeholders, and identifying research needs.",
+    "owner": "Designer",
+    "outcome": "Shared understanding of the problem and a clear research plan.",
+    "acceptanceCriteria": [
+      "Problem statement is documented and aligned with PM",
+      "Research gaps are identified",
+      "Discovery plan is shared with team"
+    ],
+    "subTasks": [
+      "Write problem statement",
+      "Identify knowledge gaps",
+      "Align with PM on scope"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Discovery",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "product-requirement-shareout",
+    "title": "Product Requirement Share-out",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "PM shares the product requirements and business context with the design team.",
+    "owner": "PM → Designer",
+    "outcome": "Designer has full context on requirements, constraints, and success metrics.",
+    "acceptanceCriteria": [
+      "PRD or equivalent document reviewed",
+      "Open questions captured and addressed",
+      "Success metrics understood"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Product Requirement Share-out",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "competitor-analysis",
+    "title": "Competitor Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Review how competitors and industry leaders solve the same or similar problems.",
+    "owner": "Designer",
+    "outcome": "Competitive landscape overview with key differentiators and inspiration.",
+    "acceptanceCriteria": [
+      "Minimum 3 competitors reviewed",
+      "UX patterns documented",
+      "Findings shared with team"
+    ],
+    "subTasks": [
+      "Identify competitors",
+      "Screenshot and annotate flows",
+      "Synthesise findings into slides or doc"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Competitor Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "desktop-research",
+    "title": "Desktop Research & Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Gather secondary research: academic papers, industry reports, heuristic evaluations.",
+    "owner": "Designer",
+    "outcome": "Evidence base to inform design decisions.",
+    "acceptanceCriteria": [
+      "Key sources reviewed and cited",
+      "Relevant insights extracted",
+      "Research summary documented"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Desktop Research & Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "users-jobs-definition",
+    "title": "Users & Jobs to Be Done Definition",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Define the target user segments and articulate their core jobs to be done (JTBD).",
+    "owner": "Designer + PM",
+    "outcome": "Documented user personas and JTBD statements.",
+    "acceptanceCriteria": [
+      "User segments defined",
+      "JTBD statements written",
+      "Signed off by PM"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Users & Jobs to Be Done Definition",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "journey-mapping",
+    "title": "Journey Mapping",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Map the end-to-end user journey to surface pain points and opportunity areas.",
+    "owner": "Designer",
+    "outcome": "Journey map artefact with annotated pain points and opportunities.",
+    "acceptanceCriteria": [
+      "Current state journey documented",
+      "Pain points identified and prioritised",
+      "Opportunities captured"
+    ],
+    "subTasks": [
+      "Gather touchpoint data",
+      "Run journey mapping workshop",
+      "Document and share map"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Journey Mapping",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "qualitative-data-analysis",
+    "title": "Qualitative Data Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Analyse existing qualitative data (interviews, feedback, support tickets) for themes.",
+    "owner": "Designer",
+    "outcome": "Thematic analysis with key insights documented.",
+    "acceptanceCriteria": [
+      "Data sources identified and reviewed",
+      "Themes and patterns extracted",
+      "Insights mapped to JTBD"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Qualitative Data Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "quantitative-data-analysis",
+    "title": "Quantitative Data Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Analyse quantitative data (analytics, funnels, surveys) to identify scale and patterns.",
+    "owner": "Designer + Data Analyst",
+    "outcome": "Data-backed understanding of user behaviour and problem scale.",
+    "acceptanceCriteria": [
+      "Relevant metrics identified",
+      "Data reviewed with analyst",
+      "Key findings documented"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Quantitative Data Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "request-quantitative-data",
+    "title": "Request Quantitative Data",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Formally request data from analytics or BI team if not yet available.",
+    "owner": "Designer",
+    "outcome": "Data request submitted and acknowledged.",
+    "acceptanceCriteria": [
+      "Request ticket created",
+      "Data owner confirmed",
+      "Expected delivery date agreed"
+    ],
+    "optional": true,
+    "jiraTemplate": {
+      "summary": "Request Quantitative Data (if necessary)",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "user-research",
+    "title": "User Research",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Conduct primary user research (interviews, contextual enquiry, diary studies) to gather direct user insights.",
+    "owner": "Designer + UX Researcher",
+    "outcome": "Research data ready for analysis.",
+    "acceptanceCriteria": [
+      "Research plan approved",
+      "Participants recruited",
+      "Sessions conducted and recorded"
+    ],
+    "subTasks": [
+      "Write discussion guide",
+      "Recruit participants",
+      "Run sessions",
+      "Transcribe / note-take"
+    ],
+    "optional": true,
+    "jiraTemplate": {
+      "summary": "User Research (if necessary)",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "user-research-analysis",
+    "title": "User Research Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Synthesise user research data into actionable insights and How Might We statements.",
+    "owner": "Designer",
+    "outcome": "Research report with insights and HMW statements.",
+    "acceptanceCriteria": [
+      "Affinity mapping completed",
+      "Key insights documented",
+      "HMW statements created",
+      "Findings presented to team"
+    ],
+    "subTasks": [
+      "Run affinity mapping session",
+      "Write insights",
+      "Draft research report"
+    ],
+    "optional": true,
+    "jiraTemplate": {
+      "summary": "User Research Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "kickoff-session",
+    "title": "Kick-off Session",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Align the full cross-functional team (PM, Engineering, Design, Data) on goals, timeline, and ways of working.",
+    "owner": "Designer + PM",
+    "outcome": "Shared understanding and alignment on project charter.",
+    "acceptanceCriteria": [
+      "All stakeholders attended or informed",
+      "Goals and success metrics documented",
+      "Ways of working agreed",
+      "Timeline shared"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Kick-off Session",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "cs-quality-analysis",
+    "title": "Customer Support Quality Analysis",
+    "phase": "discovery",
+    "state": "problem-opportunity",
+    "what": "Review CS contacts, CSAT data, and recurring complaint themes related to the problem area.",
+    "owner": "Designer + CS",
+    "outcome": "CS insights integrated into discovery findings.",
+    "acceptanceCriteria": [
+      "Top CS contact reasons identified",
+      "CSAT scores reviewed",
+      "Insights documented"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Customer Support Quality Analysis",
+      "labels": ["design-process", "problem-opportunity", "discovery"]
+    }
+  },
+  {
+    "id": "solution-wireframes",
+    "title": "Solution Wireframes",
+    "phase": "solution",
+    "state": "solution",
+    "what": "Generate and explore multiple solution concepts through low/mid-fidelity wireframes.",
+    "owner": "Designer",
+    "outcome": "Wireframe concepts ready for team review.",
+    "acceptanceCriteria": [
+      "Minimum 2 solution concepts explored",
+      "Wireframes cover all key flows",
+      "Design critique conducted",
+      "Preferred direction selected"
+    ],
+    "subTasks": [
+      "Ideation workshop / sketching",
+      "Create wireframes in Figma",
+      "Internal design review",
+      "Share with PM for direction sign-off"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Solution Wireframes",
+      "labels": ["design-process", "solution"]
+    }
+  },
+  {
+    "id": "high-fidelity-ui",
+    "title": "High-Fidelity UI",
+    "phase": "solution",
+    "state": "solution",
+    "what": "Create pixel-perfect, component-compliant high-fidelity designs ready for engineering.",
+    "owner": "Designer",
+    "outcome": "Dev-ready Figma file with all states, variants, and handoff annotations.",
+    "acceptanceCriteria": [
+      "All user flows covered in high-fi",
+      "Design system components used correctly",
+      "Accessibility checked (contrast, touch targets)",
+      "Engineering handoff complete"
+    ],
+    "subTasks": [
+      "Apply design system components",
+      "Design all states (empty, error, loading, success)",
+      "Accessibility review",
+      "Figma handoff / Dev Mode annotations"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "High-Fidelity UI",
+      "labels": ["design-process", "solution"]
+    }
+  },
+  {
+    "id": "implementation-phases-scope",
+    "title": "Implementation Phases Scope-down",
+    "phase": "solution",
+    "state": "solution",
+    "what": "Break down the solution into phased implementation milestones (MVP, Phase 1, Phase 2…).",
+    "owner": "Designer + PM + Engineering",
+    "outcome": "Agreed phased rollout plan with scope per phase.",
+    "acceptanceCriteria": [
+      "MVP scope defined and agreed",
+      "Future phases documented",
+      "Engineering complexity accounted for"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Implementation Phases Scope-down",
+      "labels": ["design-process", "solution"]
+    }
+  },
+  {
+    "id": "design-qa",
+    "title": "Design QA",
+    "phase": "build",
+    "state": "implementation",
+    "what": "Review the implemented feature against the designs to catch visual and interaction regressions before launch.",
+    "owner": "Designer",
+    "outcome": "QA sign-off with issues raised and resolved.",
+    "acceptanceCriteria": [
+      "Design vs implementation comparison done",
+      "All P0/P1 issues fixed before launch",
+      "QA sign-off documented"
+    ],
+    "subTasks": [
+      "Review on multiple devices/screen sizes",
+      "Log bugs in Jira",
+      "Re-review after fixes",
+      "Final sign-off"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Design QA (before launch)",
+      "labels": ["design-process", "implementation", "build"]
+    }
+  },
+  {
+    "id": "tracking-documentation",
+    "title": "Tracking Documentation",
+    "phase": "build",
+    "state": "implementation",
+    "what": "Document all analytics events and properties needed for measuring feature success.",
+    "owner": "Designer + PM + Data",
+    "outcome": "Tracking spec approved and implemented.",
+    "acceptanceCriteria": [
+      "All events and properties listed",
+      "Naming convention followed",
+      "Approved by Data team",
+      "Implemented and verified in dev"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Tracking Documentation",
+      "labels": ["design-process", "implementation", "build"]
+    }
+  },
+  {
+    "id": "translation-request",
+    "title": "Translation Request",
+    "phase": "build",
+    "state": "implementation",
+    "what": "Submit copy and UX writing for localisation/translation review before launch.",
+    "owner": "Designer + Content Designer",
+    "outcome": "Translation pipeline initiated and completed before launch.",
+    "acceptanceCriteria": [
+      "All string keys identified",
+      "Translation brief submitted",
+      "Sign-off from content designer"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Translation Request",
+      "labels": ["design-process", "implementation", "build"]
+    }
+  },
+  {
+    "id": "pre-launch-usability",
+    "title": "Pre-launch Usability F&F or Internal Testing",
+    "phase": "build",
+    "state": "implementation",
+    "what": "Run usability testing with friends & family or internal users before the public launch to catch critical issues.",
+    "owner": "Designer",
+    "outcome": "Validated experience with critical issues resolved before launch.",
+    "acceptanceCriteria": [
+      "Test participants recruited (F&F or internal)",
+      "Test sessions conducted",
+      "Critical issues identified and addressed",
+      "Sign-off documented"
+    ],
+    "subTasks": [
+      "Define test scope and tasks",
+      "Recruit participants",
+      "Run sessions",
+      "Triage and address critical findings"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Pre-launch Usability F&F or Internal Testing",
+      "labels": ["design-process", "implementation", "build"]
+    }
+  },
+  {
+    "id": "data-tracking-monitoring",
+    "title": "Data Tracking / Monitoring",
+    "phase": "measure",
+    "state": "implementation",
+    "what": "Monitor post-launch analytics to verify feature performance against success metrics.",
+    "owner": "Designer + PM + Data",
+    "outcome": "Dashboard or report tracking feature KPIs over the first 4–8 weeks post-launch.",
+    "acceptanceCriteria": [
+      "Monitoring dashboard set up",
+      "Baseline metrics documented",
+      "Weekly review cadence established"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Data Tracking / Monitoring",
+      "labels": ["design-process", "implementation", "measure"]
+    }
+  },
+  {
+    "id": "continuous-discovery",
+    "title": "Continuous Discovery",
+    "phase": "measure",
+    "state": "implementation",
+    "what": "Ongoing post-launch monitoring of user sentiment and behaviour through app reviews, CS contacts, and shadowing sessions.",
+    "owner": "Designer + CS",
+    "outcome": "Qualitative and behavioural signals feeding into the next iteration backlog.",
+    "acceptanceCriteria": [
+      "App Store filter set up for feature-related reviews",
+      "CS contact categories monitored",
+      "Shadowing sessions conducted",
+      "Issues fed back into backlog"
+    ],
+    "subTasks": [
+      "Monitor app reviews",
+      "CS contacts",
+      "User shadowing sessions"
+    ],
+    "optional": false,
+    "jiraTemplate": {
+      "summary": "Continuous Discovery",
+      "labels": ["design-process", "implementation", "measure"]
+    }
+  }
+]

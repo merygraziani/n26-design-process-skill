@@ -1,0 +1,11 @@
+{
+  "name": "n26-design-process",
+  "description": "Create Jira tickets for design initiatives using the N26 Design Process framework",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mery Graziani",
+    "email": "maria.graziani@n26.com"
+  },
+  "homepage": "https://github.com/merygraziani/n26-design-process-skill",
+  "repository": "https://github.com/merygraziani/n26-design-process-skill"
+}
