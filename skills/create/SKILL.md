@@ -15,7 +15,20 @@ Create the full Jira ticket hierarchy for a design initiative — from the N26 D
 
 ## Phase 1 — Determine Project Type
 
-Use `AskUserQuestion` to ask all 3 diagnostic questions in one call:
+First, use `AskUserQuestion` to ask:
+
+```
+Question: "Do you know which project type this is?"
+Options:
+  - "Yes — Simple (solution already decided)"
+  - "Yes — Complicated (problem is clear, need to define solution)"
+  - "Yes — Complex (need full discovery)"
+  - "Not sure — help me figure it out"
+```
+
+**If they pick a known type** → use it directly, skip to Phase 2.
+
+**If they pick "Not sure"** → ask the 3 diagnostic questions in one `AskUserQuestion` call:
 
 ```
 Question 1: "Is the problem space well understood?"
