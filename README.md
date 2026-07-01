@@ -28,7 +28,7 @@ In Claude Code, run these three commands:
 
 ```
 /plugin marketplace add merygraziani/n26-design-process-skill
-/plugin install n26-design-process@n26-design-process-skill
+/plugin install design-process-creator@n26-design-process-skill
 /reload-plugins
 ```
 
@@ -36,7 +36,7 @@ In Claude Code, run these three commands:
 
 Either type the skill directly:
 ```
-/n26-design-process:design-process
+/design-process-creator:design-process
 ```
 
 Or just describe what you need — Claude will recognise when to use this skill automatically based on context (e.g. "I'm starting a new project, can you create the design process tickets?").
@@ -104,6 +104,6 @@ After the task list is displayed, you can adjust it before anything is created:
 
 When there's a new version:
 ```
-/plugin marketplace update n26-design-process
+/plugin marketplace update design-process-creator
 /reload-plugins
 ```

@@ -1,12 +1,12 @@
 {
-  "name": "n26-design-process",
+  "name": "design-process-creator",
   "owner": {
     "name": "Mery Graziani",
     "email": "maria.graziani@n26.com"
   },
   "plugins": [
     {
-      "name": "n26-design-process",
+      "name": "design-process-creator",
       "source": ".",
       "description": "Create Jira tickets for design initiatives using the N26 Design Process framework"
     }
