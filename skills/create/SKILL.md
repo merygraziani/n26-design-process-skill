@@ -79,10 +79,10 @@ Display the task list for the detected project type. Show a clear header, then t
   22. Continuous Discovery                       Designer + CS     required
 
 ─────────────────────────────────────────────────────
-To edit: type  remove 3 7          to skip tasks by number
-               edit 4 New title     to rename a task
-               add New task title   to add a custom task at the end
-               done                 when you're happy
+To edit: type  remove 3 7               to skip tasks by number
+               edit task 4 New title    to rename a task
+               add task New task title  to add a custom task at the end
+               done                     when you're happy
 ─────────────────────────────────────────────────────
 ```
 
@@ -161,9 +161,9 @@ After displaying the task list, wait for user input.
 
 - If they type `done` or say they're happy → proceed to Phase 4.
 - If they type `remove 3 7` → remove those tasks from the working list, show updated list, wait again.
-- If they type `edit 4 New title` → rename task 4's `jiraTemplate.summary` and `title` to the new text. Renumber and show updated list. Wait again.
-- If they type `add New task title` → append a custom task at the end of the working list. Assign it a temporary id `custom-1`, `custom-2`, etc. (incrementing). Set `title` and `jiraTemplate.summary` to the provided text. Mark it as `required`. Show updated list, wait again.
-- If they make multiple edits in one message (e.g. "remove 9 10 11 and edit 14 to Wireframes v2") → apply all changes, show updated list.
+- If they type `edit task 4 New title` → rename task 4's `jiraTemplate.summary` and `title` to the new text. Renumber and show updated list. Wait again.
+- If they type `add task New task title` → append a custom task at the end of the working list. Assign it a temporary id `custom-1`, `custom-2`, etc. (incrementing). Set `title` and `jiraTemplate.summary` to the provided text. Mark it as `required`. Show updated list, wait again.
+- If they make multiple edits in one message (e.g. "remove 9 10 11 and edit task 14 to Wireframes v2") → apply all changes, show updated list.
 - Keep the renumbering consistent: always re-number from 1 after any removal or addition.
 - When showing an updated list, only show the diff summary ("Added: New task title" / "Removed: ...") and the updated full list.
 
