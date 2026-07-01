@@ -243,7 +243,14 @@ Wait for "go" or confirmation. If they say cancel or no, stop. Don't create anyt
 
 ## Phase 6 — Run Script
 
-**Check credentials first:** Run `echo "${JIRA_EMAIL:-NOT_SET}"` to verify the env var is available. If it prints `NOT_SET`, tell the user:
+**Check credentials first:** Run the following to source the user's shell profile and check for the env var:
+
+```bash
+source ~/.zshrc 2>/dev/null || source ~/.bash_profile 2>/dev/null || true
+echo "${JIRA_EMAIL:-NOT_SET}"
+```
+
+If it prints `NOT_SET`, tell the user:
 ```
 JIRA_EMAIL is not set. Add these to your shell profile (~/.zshrc or ~/.bash_profile) and reload:
 
@@ -294,6 +301,7 @@ Write the input JSON to `/tmp/design-process-input.json`:
 Then run:
 
 ```bash
+source ~/.zshrc 2>/dev/null || source ~/.bash_profile 2>/dev/null || true
 node "$CLAUDE_PLUGIN_ROOT/scripts/create-tickets.mjs" < /tmp/design-process-input.json
 ```
 
